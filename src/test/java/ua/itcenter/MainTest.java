@@ -498,34 +498,6 @@ class MainTest {
         assertTrue(result.contains(2));
     }
 
-//    @Test
-//    void scriptExecutionPlanFromDatabase_shouldGenerateExecutionPlan_whenProvidingVulnerabilityScript() {
-//        try {
-//            List<VulnerabilityScript> scripts = Arrays.asList(
-//                    new VulnerabilityScript(1, Collections.singletonList(2)),
-//                    new VulnerabilityScript(2, Collections.emptyList())
-//            );
-//            Storage storage = new Storage();
-//            ScriptExecutionPlan executionPlan = new ScriptExecutionPlan(storage);
-//            Field executionPlanField = ScriptExecutionPlan.class.getDeclaredField("executionPlan");
-//            executionPlanField.setAccessible(true);
-//            Set<Integer> executionPlanSet = (Set<Integer>) executionPlanField.get(executionPlan);
-//            Method scriptExecutionPlanFromDatabaseMethod = ScriptExecutionPlan.class.getDeclaredMethod("scriptExecutionPlanFromDatabase", List.class);
-//            scriptExecutionPlanFromDatabaseMethod.setAccessible(true);
-//            Set<Integer> expected = new LinkedHashSet<>();
-//            expected.add(2);
-//            expected.add(1);
-//
-//            scriptExecutionPlanFromDatabaseMethod.invoke(executionPlan, scripts);
-//
-//            assertEquals(expected, executionPlanSet);
-//            assertEquals(2, executionPlanSet.size());
-//            assertEquals(2, executionPlanSet.iterator().next());
-//        } catch (NoSuchMethodException | NoSuchFieldException | IllegalAccessException | InvocationTargetException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     @Test
     void getMapFromScriptList_shouldGetKeyValueMap_whenProvidingVulnerabilityScript() {
         try {
