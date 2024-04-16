@@ -1,4 +1,4 @@
-package ua.itcenter.service;
+package ua.itcenter;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -9,18 +9,20 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import ua.itcenter.db.Storage;
 import ua.itcenter.model.KeyValueMap;
 import ua.itcenter.model.VulnerabilityScript;
+import ua.itcenter.service.ScriptExecutionPlan;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class ScriptExecutionPlanTest {
+class MainTest {
     @Mock
     private Storage storageMock;
     @InjectMocks
